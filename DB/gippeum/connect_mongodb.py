@@ -1,21 +1,15 @@
 from pymongo import MongoClient
-from bson.objectid import ObjectId
-
-client = MongoClient('mongodb://172.17.0.2:27017/')
-fp = client.finalproject
-data = {'title':'mongoDB 보기', 'tags' : ['디비서비스']}
-board_info = fp.board.insert_one(data)
-
-data = [{"name": "Ram","age":"26", "city" : "Hyderabad"}, { "name":"Rahim","age":"27","city":"Bangalore"}]
-
-res = fp.board.insert_many(data)
-print("Data inserted ......", res.inserted_ids)
-board_info = fp.board.find()
-for info in board_info:
-    print(info)
+import requests
+import json
+# from bson.objectid import ObjectId
+client = MongoClient('mongodb:/192.168.0.41:27017/')
+ppeumdb = client.ppeumdb
+url = 'http://openapi.nsdi.go.kr/nsdi/FluctuationRateofLandPriceService/attr/getByZoning?scopeDiv=B&format=json&numOfRows=1000000&authkey=51e9acfd7e4649c714d522&stdrYear='
+data = []
+for i in range(2015,2021):
+    res = requests.get(url+str(i))   
+    if res.status_code == 200:
+        url_json = json.loads(res.content)
+        data.append(url_json)
+ppeumdb.land.insert(data)
 client.close()
-
-#mydb.board.update({'_id':ObjectId('5f..7')},{'$push':{'tags':'MySQL'}})
-
-
-
