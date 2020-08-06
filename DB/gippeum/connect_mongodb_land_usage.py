@@ -23,20 +23,25 @@
 
 ################
 
-# from pymongo import MongoClient
-# import requests
-# import json
-# # from bson.objectid import ObjectId
+from pymongo import MongoClient
+import requests
+import json
+# from bson.objectid import ObjectId
 
-# client = MongoClient('mongodb://192.168.0.41:27017/')
-# ppeumdb = client.ppeumdb
-# url = 'http://openapi.nsdi.go.kr/nsdi/FluctuationRateofLandPriceService/attr/getByZoning?scopeDiv=B&format=json&numOfRows=1000000&authkey=51e9acfd7e4649c714d522&stdrYear='
-# for i in range(2015,2021):
-#     res = requests.get(url+str(i))   
-#     if res.status_code == 200:
-#         data = json.loads(res.content)
-#         ppeumdb.land.insert_many(data)
-# client.close()
+ppeumdb = MongoClient('192.168.0.41:27017').ppeumdb
+
+url = 'http://openapi.nsdi.go.kr/nsdi/FluctuationRateofLandPriceService/attr/getByZoning?scopeDiv=B&format=json&numOfRows=1000000&authkey=51e9acfd7e4649c714d522'
+for m in range(2015,2021):
+    a = url + '&stdrYear=' + str(m)
+    for n in range(1,13):
+        b = a + '&stdrMt=' + str(n)
+        res = requests.get(b)  
+        if res.status_code == 200:
+            # data = json.loads(res.content)
+            # requests.get(url).json()
+            data = json.loads(res.content)
+            ppeumdb.land.insert_one(data)
+client.close()
 
 # # document must be an instance of dict, bson.son.SON, bson.raw_bson.RawBSONDocument, or a type that inherits from collections.MutableMapping
 
@@ -63,27 +68,35 @@
 # # BSON document too large (59889840 bytes) - the connected server supports BSON document sizes up to 16793598 bytes.
 
 
-# GridFS
-from pymongo import MongoClient
-import requests
-import bsonjs
-from bson.raw_bson import RawBSONDocument
-import gridfs
+# # GridFS
+# from pymongo import MongoClient
+# import requests
+# import bsonjs
+# from bson.raw_bson import RawBSONDocument
+# from gridfs import GridFS
+# from bson.objectid import ObjectId
 
-client = MongoClient('192.168.0.41', 27017, document_class=RawBSONDocument)
-ppeumdb = client.ppeumdb
-fs = gridfs.GridFS(ppeumdb)
+# client = MongoClient('192.168.0.41', 27017, document_class=RawBSONDocument)
+# ppeumdb = client.ppeumdb
+# # ppeumdb = MongoClient('192.168.0.41', 27017, document_class=RawBSONDocument).ppeumdb
 
-url = 'http://openapi.nsdi.go.kr/nsdi/FluctuationRateofLandPriceService/attr/getByZoning?scopeDiv=B&format=json&numOfRows=1000000&authkey=51e9acfd7e4649c714d522&stdrYear='
-for i in range(2015,2021):
-    res = requests.get(url+str(i))   
-    if res.status_code == 200:
-        bson_data = bsonjs.loads(res.content)
-        raw_bson = RawBSONDocument(bson_data)
-        result = ppeumdb.land.insert_many(raw_bson)    # insert_one, insert_many
-        result.inserted_ids  # ?
-        print(result.acknowledged)
-client.close()
+# fs = GridFS(ppeumdb)
+
+# url = 'http://openapi.nsdi.go.kr/nsdi/FluctuationRateofLandPriceService/attr/getByZoning?scopeDiv=B&format=json&numOfRows=1000000&authkey=51e9acfd7e4649c714d522&stdrYear='
+# for i in range(2015,2021):
+#     res = requests.get(url+str(i))   
+#     if res.status_code == 200:
+#         bson_data = bsonjs.loads(res.content)
+#         raw_bson = RawBSONDocument(bson_data)
+#         # result = fs.put(raw_bson)    # can only write strings or file-like objects
+#         with open(raw_bson, 'rb') as dictionary:
+#             uid = fs.put(dictionary)
+#         # result.inserted_ids  # ?
+#         # print(result.acknowledged)
+# client.close()
+
+# fs.get(result).read()
+
 
 
 
