@@ -1,7 +1,6 @@
 from pymongo import MongoClient
 import requests
 import json
-# from bson.objectid import ObjectId
 
 client = MongoClient('192.168.0.41:27017')
 ppeumdb = client.ppeumdb

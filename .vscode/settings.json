@@ -1,13 +1,13 @@
 {
     "sqltools.connections": [
         {
-            "askForPassword": true,
             "database": "finalproject",
             "driver": "MariaDB",
             "mysqlOptions": {
                 "authProtocol": "default"
             },
             "name": "ppeum",
+            "password": "tiger",
             "port": 3306,
             "previewLimit": 50,
             "server": "192.168.0.41",
