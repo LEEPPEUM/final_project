@@ -1,10 +1,8 @@
 from pymongo import MongoClient
 client = MongoClient('mongodb://192.168.0.41:27017/')
 ppeumdb = client.ppeumdb
-land_sido = ppeumdb.land_sido.find()
+land_sido = ppeumdb.land_sido.find() # _id.count() = 60, each year and month, 2015 ~ 2019
 
-
-print(land_sido)
 
 import pymysql
 conn = pymysql.connect(
@@ -19,23 +17,32 @@ conn = pymysql.connect(
 cursor = conn.cursor()
 
 
-query = "INSERT INTO LAND_SIDO_ppeum (stdrYear, stdrMt, ldCtprvnCode, ldCtprvnNm, ldCpsgCode, ldCpsgCodeNm, ldEmdLiCode, ldEmdLiCodeNm, pclndIndex, pclndChgRt) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+query = "INSERT INTO finalproject.LAND_SIDO_ppeum (stdrYear, stdrMt, ldCtprvnCode, ldCtprvnNm, ldCpsgCode, ldCpsgCodeNm, ldEmdLiCode, ldEmdLiCodeNm, pclndIndex, pclndChgRt) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 
 
-for m in range(len(land_sido['byRegions']['field'])):
-   land = land_sido['byRegions']['field']
-   land[m]
-   for n in range(len(land)):
-      stdrYear = land[n].values[0]
-      stdrMt = land[n].values[1]
-      ldCtprvnCode = land[n].values[2]
-      ldCtprvnNm = land[n].values[3]
-      ldCpsgCode = land[n].values[4]
-      ldCpsgCodeNm = land[n].values[5]
-      ldEmdLiCode = land[n].values[6]
-      ldEmdLiCodeNm = land[n].values[7]
-      pclndInde = land[n].values[8]
-      pclndChgRt = land[n].values[9]
+for sido in land_sido: # _id Of land_sido: 60, _id Of sido : 1
+   field = sido['byRegions']['field']    # {'byRegions':{'field':[{},{},...,{}]},{numOfRows:10000},{pageNo:1}}
+   # values = field[0].values()
+   # print(values)
+   # values = list(values)
+   # print(values[2])
+   # for value in values:
+   #    print(value)
+   for n in range(len(field)):   # field: Gyeonggi-do, JAU, 2015
+      values = field[n].values()
+      values = list(values)
+      #  
+      stdrYear = values[2]
+      stdrMt = values[3]
+      ldCtprvnCode = values[5]
+      ldCtprvnNm = values[6]
+      ldCpsgCode = values[0]
+      ldCpsgCodeNm = values[7]
+      ldEmdLiCode = values[1]
+      ldEmdLiCodeNm = values[8]
+      pclndIndex = values[9]
+      pclndChgRt = values[10]
+      #
       cursor.execute(query,(stdrYear, stdrMt, ldCtprvnCode, ldCtprvnNm, ldCpsgCode, ldCpsgCodeNm, ldEmdLiCode, ldEmdLiCodeNm, pclndIndex, pclndChgRt))
 conn.commit()
 conn.close()
