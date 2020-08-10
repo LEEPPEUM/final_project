@@ -1,6 +1,10 @@
 import pymysql
-db = pymysql.connect(host='192.168.0.41',port=3306,user='scott',passwd='tiger',db='finalproject',charset='utf8',autocommit=True)
-
+db = pymysql.connect(
+    host='192.168.0.41', port=3306,
+    user='scott', passwd='tiger',
+    db='finalproject',
+    charset='utf8', autocommit=True
+    )
 cursor = db.cursor(pymysql.cursors.DictCursor)
 cursor.execute("SELECT * from DB_leegippeum")
 data = cursor.fetchall()
@@ -10,10 +14,10 @@ db.close()
 
 
 #
-❖ Create Table economic(release_date text, title text, link text);
-❖ insert 2 record into economic
-~$ pip install PyMySQL
-~$ vi ./connect_mariadb.py
+# ❖ Create Table economic(release_date text, title text, link text);
+# ❖ insert 2 record into economic
+# ~$ pip install PyMySQL
+# ~$ vi ./connect_mariadb.py
 >>> import pymysql
 >>> db = pymysql.connect(host='localhost', port=3306, user='root', passwd='tiger',
 db='yojulabdb',charset='utf8',autocommit=True)
