@@ -23,7 +23,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
    [완료] Convert MongoDB to MariaDB 작업   
    [완료] 개발용 git branch feature09로 작업하다가 master branch로 merge.   
    [완료] MariaDB 및 Python으로 MariaDB 연결하여 데이터 전처리   
-   [완료] key를 이용하여 하나의 데이터셋으로 통합(inner join)   
+   [완료] key를 이용하여 하나의 데이터셋으로 통합(inner join)
+   [완료] jamovi로 독립변수들간의 연관성을 살피고 이상치 확인, 범주형 변수의 특성 파악.
    [진행중] 딥러닝 모델링   
    [진행중] one-hot convert 방식      
    
