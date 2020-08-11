@@ -5,31 +5,31 @@
    
 # **업무 분담**   
 
-- 소영 :
+- 소영 :   
    [완료] 경기도주소DB 업로드 1)pnu생성 2)db업로드   
    [완료] 토지특성정보 API DB업로드 -key:경기도pnu   
    [완료] 주소지 위경도 산출   
-   [완료] 가장 가까운 고속도로 영업소 자동부여 코드
-   [완료] 딥러닝용 데이터프레임 구축 1)아웃라이어, 표준화 2)kmeans 적용
-   [진행중] 머신러닝 모델링(k-means), Python으로 데이터 전처리   
+   [완료] 가장 가까운 고속도로 영업소 자동부여 코드   
+   [완료] 딥러닝용 데이터프레임 구축 1)아웃라이어, 표준화 2)kmeans 적용   
+   [진행중] 머신러닝 모델링(k-means), Python으로 데이터 전처리      
  
    
-- 기쁨 : 
-   [완료] 경기도 지가지수, 지가변동률 데이터
-   [완료] API 호출하여 MongoDB로 데이터 업로드
-   [완료] Convert MongoDB to MariaDB 작업
-   [완료] 개발용 git branch feature09로 작업하다가 master branch로 merge.
-   [완료] MariaDB 및 Python으로 MariaDB 연결하여 데이터 전처리
-   [완료] key를 이용하여 하나의 데이터셋으로 통합(inner join)
-   [진행중] 딥러닝 모델링
-   [진행중] one-hot convert 방식    
+- 기쁨 :   
+   [완료] 경기도 지가지수, 지가변동률 데이터   
+   [완료] API 호출하여 MongoDB로 데이터 업로드   
+   [완료] Convert MongoDB to MariaDB 작업   
+   [완료] 개발용 git branch feature09로 작업하다가 master branch로 merge.   
+   [완료] MariaDB 및 Python으로 MariaDB 연결하여 데이터 전처리   
+   [완료] key를 이용하여 하나의 데이터셋으로 통합(inner join)   
+   [진행중] 딥러닝 모델링   
+   [진행중] one-hot convert 방식      
    
 
 - 준오 : 
-   [완료] 영업소별 교통량, IC/JCT 위치정보, 전국 영업소 위치정보 MariaDB에 업로드
-   [완료] 행정구역별 토지거래량 (경기도) 데이터 가공 
-   [완료] mongoDB, MariaDB 서버 구축 & 관리 
-   [진행중] Django 웹 서비스 구축 및 개발   
+   [완료] 영업소별 교통량, IC/JCT 위치정보, 전국 영업소 위치정보 MariaDB에 업로드   
+   [완료] 행정구역별 토지거래량 (경기도) 데이터 가공   
+   [완료] mongoDB, MariaDB 서버 구축 & 관리   
+   [진행중] Django 웹 서비스 구축 및 개발    
 
 
 
