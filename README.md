@@ -30,7 +30,7 @@
    [완료] 행정구역별 토지거래량 (경기도) 데이터 가공   
    [완료] mongoDB, MariaDB 서버 구축 & 관리   
    [진행중] Django 웹 서비스 구축 및 개발       
-#
+
 
 
 # PROJECT_SCHEDULE   
