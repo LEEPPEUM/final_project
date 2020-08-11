@@ -5,7 +5,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 #
 
 
-# **업무 분담**   
+# **업무 분담**
+The Division of Work
 (ㄱㄴㄷ순)   
 
 **- 소영 :**   
