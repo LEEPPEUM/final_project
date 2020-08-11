@@ -8,7 +8,9 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 # **업무 분담**
 The Division of Work   
   
+  
 (ㄱㄴㄷ순)   
+  
   
 **- 소영 :**   
    [완료] 경기도주소DB 업로드 1)pnu생성 2)db업로드   
@@ -30,12 +32,14 @@ The Division of Work
    [진행중] 딥러닝 모델링   
    [진행중] one-hot convert 방식      
    
-
+   
 **- 준오 :**   
    [완료] 영업소별 교통량, IC/JCT 위치정보, 전국 영업소 위치정보 MariaDB에 업로드   
    [완료] 행정구역별 토지거래량 (경기도) 데이터 가공   
    [완료] mongoDB, MariaDB 서버 구축 & 관리   
    [진행중] Django 웹 서비스 구축 및 개발       
+   
+   
 #
 
 
