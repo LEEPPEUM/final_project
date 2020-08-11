@@ -6,9 +6,10 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 
 
 # **업무 분담**
-The Division of Work
+The Division of Work   
+  
 (ㄱㄴㄷ순)   
-
+  
 **- 소영 :**   
    [완료] 경기도주소DB 업로드 1)pnu생성 2)db업로드   
    [완료] 토지특성정보 API DB업로드 -key:경기도pnu   
