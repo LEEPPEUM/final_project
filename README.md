@@ -1,5 +1,7 @@
 #
-# <center>**< 경기도 지역 순수토지에 대한 부동산 투자가치평가 웹서비스 >**</center>   
+# **< 경기도 지역, 토지부동산 투자가치평가 웹서비스 >**
+Land real estate Investment Valuation Web Service for the Gyeonggi-do area.
+
 #
 
 
