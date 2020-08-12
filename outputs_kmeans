@@ -1,0 +1,25 @@
+lndpclAr          3.097785e+09
+pblntfPclnd       1.028398e+12
+pclndIndex        1.048872e+01
+pclndChgRt        3.854163e-02
+trafficAmount     5.096108e+12
+                      ...     
+roadSideCode8     1.819136e-01
+roadSideCode9     1.388379e-02
+roadSideCode10    8.774058e-02
+roadSideCode11    1.735504e-03
+roadSideCode12    1.799025e-01
+Length: 78, dtype: float64
+
+lndpclAr          0.109757
+pblntfPclnd       0.110041
+pclndIndex        0.045607
+pclndChgRt        0.053233
+trafficAmount     0.136707
+                    ...   
+roadSideCode8     0.181914
+roadSideCode9     0.013884
+roadSideCode10    0.087741
+roadSideCode11    0.001736
+roadSideCode12    0.179903
+Length: 78, dtype: float64
