@@ -50,8 +50,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
    [완료] 토지특성정보 API DB업로드 -key:경기도pnu   
    [완료] 주소지 위경도 산출   
    [완료] 가장 가까운 고속도로 영업소 자동부여 코딩   
-   [진행중] 데이터 전처리 (with python)   
-           1) one-hot encoding, outlier 처리,scaler, standardization   
+   [완료] 데이터 전처리 (with python)   
+           1) one-hot encoding, outlier 처리,scaler   
            2) 전처리 단계별 Jamovi model power, vif check    
            3) 전처리 단계별 var check    
    [진행중] 머신러닝 모델링(k-means)      
