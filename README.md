@@ -6,7 +6,7 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 
 # **가설 설정 (Hypothesis)**
 
-###**1. 독립변수**   
+### **1. 독립변수**   
 - 개별공시지가가 낮을수록
 - 토지 면적이 넓을수록
 - 도로접면을 봤을때 도로와 가까울수록 
@@ -21,7 +21,7 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 
 더 가치가 있고 개발에 용이한 매력적인 토지라고 가정한다.
    
-###**2. 종속변수**   
+### **2. 종속변수**   
 - A급: 토지 그 자체로 매력적인 매물 
 - B급: 개발이 필요하지만 괜찮은 매물
 - C급: 투자가치가 없는 매물   
