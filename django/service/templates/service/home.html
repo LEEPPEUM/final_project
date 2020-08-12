@@ -1,8 +1,6 @@
-<!-- 주소 : {{si_gun_gu}}{{eup_myeon_dong}}
-공시지가 : {{gongsijiga}} -->
+{% load static %}
 
-
-<html>
+<html>    
     <head>
         <style>
             #resultTable {
@@ -33,49 +31,73 @@
     <body>
         <table id ="resultTable">
             <tr>
+                <th>주소</th>
+                <th>지가</th>
+                <th>pnu</th>
+            </tr>                       
+            {% for v1,v2,v3 in mylist %} 
+            <tr>
+                <td>{{v1}}</td>                
+                <td>{{v2}}</td>
+                <td>{{v3}}</td>
+            </tr>
+            {% endfor %}             
+
+            <!-- <tr>
                 <th>pnu</th>
                 <th>주소</th>
+                <th>지가</th>
             </tr>
             <tr>
                 <td>{{pnu.1}}</td>
                 <td>{{juso.1}}</td>
+                <td>{{pblntfPclnd.1}}</td>
             </tr>
             <tr>
                 <td>{{pnu.2}}</td>
                 <td>{{juso.2}}</td>
+                <td>{{pblntfPclnd.2}}</td>
             </tr>
             <tr>
                 <td>{{pnu.3}}</td>
                 <td>{{juso.3}}</td>
+                <td>{{pblntfPclnd.3}}</td>
             </tr>
             <tr>
                 <td>{{pnu.4}}</td>
                 <td>{{juso.4}}</td>
+                <td>{{pblntfPclnd.4}}</td>
             </tr>
             <tr>
                 <td>{{pnu.5}}</td>
                 <td>{{juso.5}}</td>
+                <td>{{pblntfPclnd.5}}</td>
             </tr>
             <tr>
                 <td>{{pnu.6}}</td>
                 <td>{{juso.6}}</td>
+                <td>{{pblntfPclnd.6}}</td>
             </tr>
             <tr>
                 <td>{{pnu.7}}</td>
                 <td>{{juso.7}}</td>
+                <td>{{pblntfPclnd.7}}</td>
             </tr>
             <tr>
                 <td>{{pnu.8}}</td>
                 <td>{{juso.8}}</td>
+                <td>{{pblntfPclnd.8}}</td>
             </tr>
             <tr>
                 <td>{{pnu.9}}</td>
                 <td>{{juso.9}}</td>
+                <td>{{pblntfPclnd.9}}</td>
             </tr>
             <tr>
                 <td>{{pnu.10}}</td>
                 <td>{{juso.10}}</td>
-            </tr>
+                <td>{{pblntfPclnd.10}}</td>
+            </tr> -->
         </table>
     </body>
 </html>

@@ -82,15 +82,59 @@
     </head>
     <body>
         <form action="/service/" method ="get">
-            <lavel for ="si_gun_gu"> 시 군 구 : </lavel>
-            <input type ="text" name = "si_gun_gu">            
-            <br><br>
-            <lavel for ="si_gun_gu"> 읍 면 동 : </lavel>
-            <input type ="text" name = "eup_myeon_dong">   
-            <br><br>
-            <label for ="gongsijiga"> 공시지가 : </label>
-            <input type = "number" name ="gongsijiga">          
-            
+            <p>
+                <lavel for ="si_gun_gu"> 시 군 구 : </lavel>
+                <input type ="text" name = "si_gun_gu">            
+            </p>
+           
+            <p>
+                <lavel for ="si_gun_gu"> 읍 면 동 : </lavel>
+                <input type ="text" name = "eup_myeon_dong">   
+            </p>           
+            <p>
+                <label for ="gongsijiga">공시지가 : </label>
+                <input type = "number" name ="gongsijiga">       
+            </p>            
+            <p>
+                지목코드 : 
+                <select name = lncode>
+                    <option value="01">01:전</option>
+                    <option value="02">02:답</option>
+                    <option value="03">03:과수원</option>
+                    <option value="04">04:목장용지</option>
+                    
+                    <option value="05">05:임야</option>
+                    <option value="06">06:광천지</option>
+                    <option value="07">07:염전</option>
+                    <option value="08">08:대</option>
+
+                    <option value="09">09:공장용지</option>
+                    <option value="10">10:학교용지</option>
+                    <option value="11">11:주차장</option>
+                    <option value="12">12:주요소</option>
+
+                    <option value="13">13:창고용지</option>
+                    <option value="14">14:도로</option>
+                    <option value="15">15:철도용지</option>
+                    <option value="16">16:제방</option>
+
+                    <option value="17">17:하천</option>
+                    <option value="18">18:구거</option>
+                    <option value="19">19:유지</option>
+                    <option value="20">20:양어장</option>
+
+                    <option value="21">21:수도용지</option>
+                    <option value="22">22:공원</option>
+                    <option value="23">23:체육용지</option>
+                    <option value="24">24:유원지</option>
+
+                    <option value="25">25:종교용지</option>
+                    <option value="26">26:사적지</option>
+                    <option value="27">27:묘지</option>
+                    <option value="28">28:잡종지</option>
+
+                </select>
+            </p>            
             <input type ="submit" value = "Submit"> <input type ="reset" value ="Reset">
         </form>
     </body>

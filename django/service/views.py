@@ -60,12 +60,27 @@ def home(request):
     pdDatasets = pd.DataFrame(datasets)
     testdata = pdDatasets[pdDatasets['ldCode']==pnu_10]
     testdata = testdata.reset_index()
-    #다시 dict type으로
-    testdata_to_dict = testdata.to_dict('list')
-    print(testdata_to_dict.keys())
+
+    try :
+        testdata['pblntfPclnd'] = test[test[pblntfPclnd]] = jiga # 입력받은 공시지가로 모든 컬럼 변경
+    except :
+        print('ignore')
 
 
-    return render(request,'service/home.html',context=testdata_to_dict)
+    #다시 dict type으로   
+    testdata_to_dict = testdata.to_dict('list')  
+    mylist = zip(testdata_to_dict['juso'],testdata_to_dict['pblntfPclnd'],testdata_to_dict['pnu']) 
+    context_ = {
+        'mylist':mylist,
+    }  
+
+
+    # 남은 작업 : 입력받은 공시지가로 가져온 데이터셋(pdDatasets) 속성에 다 매칭하여 바꿔주고
+
+    # 모델 받으면 모델에 넣어준다. 이 때 딥러닝이므로 레코드 하나하나를 numpy화 해야한다.     
+    
+
+    return render(request,'service/home.html',context=context_)
     # return render(request,'service/home.html',context=data)
 
 
