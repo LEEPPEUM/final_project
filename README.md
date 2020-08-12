@@ -16,9 +16,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 - 지가 지수가 낮을수록
 - 지가 변동률이 낮을수록
 - 주변 영업소의 교통량이 많을수록
-- 주변 영업소 IC와의 거리가 짧을수록
-
-
+- 주변 영업소 IC와의 거리가 짧을수록   
+   
 더 가치가 있고 개발에 용이한 매력적인 토지라고 가정한다.
    
 ### **2. 종속변수**   
@@ -26,9 +25,9 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 - B급: 개발이 필요하지만 괜찮은 매물
 - C급: 투자가치가 없는 매물   
    
-매물에 대한 평가를 하여 등급을 매기고자 한다.
+매물에 대한 평가를 하여 등급을 매기고자 한다.   
    
-기존에 없던 종속변수이기 때문에 Machine Learning의 K-means 모델을 이용하여 새롭게 만들어 온전한 데이터셋을 만들 예정이다.
+기존에 없던 종속변수이기 때문에 Machine Learning의 K-means 모델을 이용하여 새롭게 만들어 온전한 데이터셋을 만들 예정이다.   
 
 #
 
