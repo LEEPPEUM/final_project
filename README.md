@@ -1,10 +1,9 @@
 #
 # **< 경기 지역의 토지부동산 투자가치평가 웹서비스 >**
 Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
-
-#
    
 #
+
 # **가설 설정**
 
 **1. 독립변수**
@@ -25,6 +24,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 매물에 대한 평가를 하여 등급을 매기고자 한다.
    
 기존에 없던 종속변수이기 때문에 Machine Learning의 K-means 모델을 이용하여 새롭게 만들어 온전한 데이터셋을 만들 예정이다.
+
+#
 
 # **서비스 아키텍처 (Service Architecture)**
    
