@@ -45,7 +45,7 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 (ㄱㄴㄷ순)   
   
   
-**- 소영 :**   
+### **- 소영 :**   
    [완료] 경기도주소DB 업로드 1)pnu생성 2)db업로드   
    [완료] 토지특성정보 API DB업로드 -key:경기도pnu   
    [완료] 주소지 위경도 산출   
@@ -55,7 +55,7 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
    [진행중] 머신러닝 모델링(k-means)      
  
    
-**- 기쁨 :**   
+### **- 기쁨 :**   
    [완료] README.md 작성    
    [완료] 경기도 지가지수, 지가변동률 데이터   
    [완료] API 호출하여 MongoDB로 데이터 업로드   
@@ -67,7 +67,7 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
    [진행중] 딥러닝 모델링       
    
    
-**- 준오 :**   
+### **- 준오 :**   
    [완료] 영업소별 교통량, IC/JCT 위치정보, 전국 영업소 위치정보 MariaDB에 업로드   
    [완료] 행정구역별 토지거래량 (경기도) 데이터 가공   
    [완료] mongoDB, MariaDB 서버 구축 & 관리   
