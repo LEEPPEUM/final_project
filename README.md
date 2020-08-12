@@ -45,7 +45,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 (ㄱㄴㄷ순)   
   
   
-### **- 김소영(Kim Soyoung) :**   
+### **- 김소영(Kim Soyoung) :**
+   [완료] 데이터 구조 기획 
    [완료] 경기도주소DB 업로드 1)pnu생성 2)db업로드   
    [완료] 토지특성정보 API DB업로드 -key:경기도pnu   
    [완료] 주소지 위경도 산출   
@@ -54,7 +55,7 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
            1) one-hot encoding, outlier 처리,scaler   
            2) 전처리 단계별 Jamovi model power, vif check    
            3) 전처리 단계별 var check    
-   [진행중] 머신러닝 모델링(k-means)      
+   [완료] 머신러닝 모델링(k-means)      
  
    
 ### **- 이기쁨(Lee Gippeum) :**   
