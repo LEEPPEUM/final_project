@@ -4,7 +4,7 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
    
 #
 
-# **가설 설정**
+# **가설 설정 (Hypothesis)**
 
 **1. 독립변수**
 - 도로접면을 봤을때 도로와 가까울수록 
@@ -15,12 +15,14 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 - 지가 변동률이 클수록
 - 주변 영업소의 교통량이 많을수록
 - 주변 영업소 IC와의 거리가 짧을수록   
+
 더 가치가 있고 개발에 용이한 매력적인 토지라고 가정한다.
    
 **2. 종속변수**
 - A급: 토지 그 자체로 매력적인 매물 
 - B급: 개발이 필요하지만 괜찮은 매물
 - C급: 투자가치가 없는 매물   
+   
 매물에 대한 평가를 하여 등급을 매기고자 한다.
    
 기존에 없던 종속변수이기 때문에 Machine Learning의 K-means 모델을 이용하여 새롭게 만들어 온전한 데이터셋을 만들 예정이다.
@@ -45,29 +47,29 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
    [완료] 토지특성정보 API DB업로드 -key:경기도pnu   
    [완료] 주소지 위경도 산출   
    [완료] 가장 가까운 고속도로 영업소 자동부여 코딩   
-   [진행중] 데이터 수집 완료 이후 데이터 전처리 (with python)
-   1)outlier,scaler 2)전처리 단계별 jamovi vif,model power check 3)전처리 단계별 분산확인
+   [진행중] 데이터 수집 완료 이후 데이터 전처리 (with python)   
+            1)outlier,scaler 2)전처리 단계별 jamovi vif,model power check 3)전처리 단계별 분산확인   
    [진행중] 머신러닝 모델링(k-means)      
  
    
 **- 기쁨 :**   
-   [완료] README.md 작성 
+   [완료] README.md 작성    
    [완료] 경기도 지가지수, 지가변동률 데이터   
    [완료] API 호출하여 MongoDB로 데이터 업로드   
    [완료] Convert MongoDB to MariaDB 작업   
    [완료] 개발용 git branch feature09로 작업하다가 master branch로 merge.   
    [완료] MariaDB 및 Python으로 MariaDB 연결하여 데이터 전처리   
-   [완료] key를 이용하여 하나의 데이터셋으로 통합(inner join)
-   [완료] jamovi로 독립변수들간의 연관성을 살피고 이상치 확인, 범주형 변수의 특성 파악.
-   [진행중] 딥러닝 모델링   
-   [진행중] one-hot convert 방식      
+   [완료] key를 이용하여 하나의 데이터셋으로 통합(inner join)   
+   [완료] jamovi로 독립변수들간의 연관성을 살피고 이상치 확인, 범주형 변수의 특성 파악.   
+   [진행중] 딥러닝 모델링       
    
    
 **- 준오 :**   
    [완료] 영업소별 교통량, IC/JCT 위치정보, 전국 영업소 위치정보 MariaDB에 업로드   
    [완료] 행정구역별 토지거래량 (경기도) 데이터 가공   
    [완료] mongoDB, MariaDB 서버 구축 & 관리   
-   [진행중] Django 웹 서비스 구축 및 개발       
+   [진행중] Django 웹 서비스 구축 및 개발  
+   [진행중] Python에서 Django와 MariaDB를 연결하여 웹  제공
    
    
 #
