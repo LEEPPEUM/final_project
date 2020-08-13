@@ -73,7 +73,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
 ### **- 이준오(Lee Juno) :**   
    [완료] 영업소별 교통량, IC/JCT 위치정보, 전국 영업소 위치정보 MariaDB에 업로드   
    [완료] 행정구역별 토지거래량 (경기도) 데이터 가공   
-   [완료] mongoDB, MariaDB 서버 구축 & 관리   
+   [완료] mongoDB, MariaDB 서버 구축 & 관리
+   [완료] Django README.md 작성
    [진행중] Django 웹 서비스 구축 및 개발  
    [진행중] Python에서 Django와 MariaDB를 연결하여 웹 서비스 화면 제공.
    
