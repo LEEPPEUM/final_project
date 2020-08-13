@@ -6,7 +6,10 @@
 1. form.html에서 입력받을 form을 제공, 사용자가 form에 맞게 데이터를 입력
 
 ---
-![](.\form.JPG) 
+x-special/nautilus-clipboard
+copy
+file:///home/sundooedu/%EB%AC%B8%EC%84%9C/final_project/django/form.JPG
+
 ---
 
 2. service.views.py에 있는 home 함수에서 form에서 보내준 값을 가져와 데이터를 저장한다.
@@ -77,7 +80,7 @@ try :
 except :
     print('ignore')
 ```
-
+---
 5. home.html에 위에서 조작한 데이터를 보내주어 서비스화면에 표시해야 하기 때문에 dict타입으로 변경해주는 작업과 service에서 보여줄 독립변수만 보내주기위해 zip(리스트형태로 된 데이터들을 dict타입으로 묶어주기 위해 사용: [list1],[list2],[list3]...) 으로 묶는다.
 
 - testdata_to_dict도 dictionary 타입인데 zip으로 한 번더 dictionary type으로 묶어주는 이유 : return 하여 html로 보낼 때 반복문하나로 여러개의 요소를 가져올 수 있게 하기 위해 사용한다. 
@@ -111,7 +114,9 @@ context_ = {
 --> **_결과화면 예시_**
 
 ---
-![결과화면 예시](.\result.JPG) 
+x-special/nautilus-clipboard
+copy
+file:///home/sundooedu/%EB%AC%B8%EC%84%9C/final_project/django/result.JPG
 
 ---
 
