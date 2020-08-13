@@ -1,121 +1,125 @@
-# 🤠 DJango로 구현한 웹서비스 화면 구성
+#
+# 📈 **< 경기 지역의 토지부동산 투자가치평가 웹서비스 >**
+Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
+   
+#
 
-## + _구현되어 있는 기능_ 
-#### form.html 화면에서 값을 요청받을 때 마다 동작한다.
+# **가설 설정 (Hypothesis)**
 
-1. form.html에서 입력받을 form을 제공, 사용자가 form에 맞게 데이터를 입력
+### **1. 독립변수**   
+- 개별공시지가가 낮을수록
+- 토지 면적이 넓을수록
+- 개발제한구역과 자연환경보전지역을 제외한 나머지 개발이 가능한 용도지역
+- 개발이 가능한 지목 종류(전, 답, 잡종지)
+- 도로접면을 봤을때 도로와 가까울수록   
+- 지형 높이가 경사 지지않고 완만할수록
+- 지형 형상이 건물을 세우기에 좋을수록(건폐율, 용적률과 관련)
+- 지가 지수가 낮을수록
+- 지가 변동률이 낮을수록
+- 주변 영업소의 교통량이 많을수록
+- 주변 영업소 IC와의 거리가 짧을수록   
+   
+더 가치가 있고 개발에 용이한 매력적인 토지라고 가정한다.
+   
+### **2. 종속변수**   
+- A급: 토지 그 자체로 매력적인 매물 
+- B급: 개발이 필요하지만 괜찮은 매물
+- C급: 투자가치가 없는 매물   
+   
+매물에 대한 평가를 하여 등급을 매기고자 한다.   
+   
+기존에 없던 종속변수이기 때문에 Machine Learning의 K-means 모델을 이용하여 새롭게 만들어 온전한 데이터셋을 만들 예정이다.   
 
----
-![form](https://user-images.githubusercontent.com/45375353/90083379-451d7480-dd4d-11ea-926e-0530662abbc1.JPG)
+#
 
----
+# **서비스 아키텍처 (Service Architecture)**
+   
+- 클라이언트(Client)가 웹페이지에서 투자하고자 하는 지역과 개별공시지가 을 입력하면 그 시도구와 읍면동에 대해 머신러닝을 통해 만들어진 데이터셋 중에서 그 주소에 해당되는 매물을 서비스하고자 한다. 이때 개별공시지가는 클라이언트가 입력한 값으로 하여 매물의 평가 등급을 예측한다.
+- 기존 데이터셋에 없는 클라이언트가 알고자하는 새로운 매물의 특성 정보(test_data) 입력 했을때 그에 대한 부동산 투자가치평가 서비스를 하고자 한다.
+   
+#
+   
+# **업무 분담 (The Division of Work)**
+  
+  
+(ㄱㄴㄷ순)   
+  
+  
+### **- 김소영(Kim Soyoung) :**
+   [완료] 데이터 구조 기획 
+   [완료] 경기도주소DB 업로드 1)pnu생성 2)db업로드   
+   [완료] 토지특성정보 API DB업로드 -key:경기도pnu   
+   [완료] 주소지 위경도 산출   
+   [완료] 가장 가까운 고속도로 영업소 자동부여 코딩   
+   [완료] 데이터 전처리 (with python)   
+           1) one-hot encoding, outlier 처리,scaler   
+           2) 전처리 단계별 Jamovi model power, vif check    
+           3) 전처리 단계별 var check    
+   [완료] 머신러닝 모델링(k-means)      
+ 
+   
+### **- 이기쁨(Lee Gippeum) :**   
+   [완료] README.md 작성    
+   [완료] 경기도 지가지수, 지가변동률 데이터   
+   [완료] API 호출하여 MongoDB로 데이터 업로드   
+   [완료] Convert MongoDB to MariaDB 작업   
+   [완료] 개발용 git branch feature09로 작업하다가 master branch로 merge.   
+   [완료] MariaDB 및 Python으로 MariaDB 연결하여 데이터 전처리   
+   [완료] key를 이용하여 하나의 데이터셋으로 통합(inner join)   
+   [완료] jamovi로 독립변수들간의 연관성을 살피고 이상치 확인, 범주형 변수의 특성 파악.   
+   [진행중] 딥러닝 모델링       
+   
+   
+### **- 이준오(Lee Juno) :**   
+   [완료] 영업소별 교통량, IC/JCT 위치정보, 전국 영업소 위치정보 MariaDB에 업로드   
+   [완료] 행정구역별 토지거래량 (경기도) 데이터 가공   
+   [완료] mongoDB, MariaDB 서버 구축 & 관리   
+   [진행중] Django 웹 서비스 구축 및 개발  
+   [진행중] Python에서 Django와 MariaDB를 연결하여 웹 서비스 화면 제공.  
+   [완료] Django README.md 작성
+   
+   
+#
 
-2. service.views.py에 있는 home 함수에서 form에서 보내준 값을 가져와 데이터를 저장한다.
----
-```python
-data = request.GET.copy()
 
-#get한 데이터 변수 저장
-si = data['si_gun_gu']
-dong = data['eup_myeon_dong']
-jiga = data['gongsijiga']
-```
----
 
-3. 주소 - (시군구), (읍면동) 한글로 들어온 데이터를 pnu코드(숫자)로 변환하기 위하여 mariaDB의 pnucode_table과 매칭하여 변환
----
-```python
-#db 가져오기
-cursor = db.cursor(pymysql.cursors.DictCursor)
-cursor.execute("SELECT * from pnucode_table")
-pddata= cursor.fetchall()
+# PROJECT_SCHEDULE   
 
-#데이터프레임화하여 조작
-pddata = pd.DataFrame(pddata)    
-a = pddata[pddata['name']==si].pnucode  #주소에 맞는 pnu code 추출 - 도시군구
-b = pddata[pddata['name']==dong].pnucode  #주소에 맞는 pnu code 추출 - 읍면동
 
-pnu_10 = pnucode_convert(a,b) # 함수 호출
-```
----
----
+### 1. 주제, 가설 세우기 (_7/29_)       
+- 서비스 대상: 부동산업자, 개인 부동산 투자자**
+- 개별공시지가, 실거래가, 지가변동률, 교통량, 도로와의 거리, 토지 특성 정보를 이용하여 투자가치가 있을 토지를 예측하여 소비자에게 서비스하고자 한다. 머신러닝을 이용하여 Clustering을 해보거나 개별공시지가를 종속변수로 하여 실거래가와 비교하고 고평가(거품가격), 적정가격, 저평가(미래투자가치)를 구분하고자 한다.
 
-```python
-# pnucod를 10자리로 만드는 함수 (시군구) + (읍면동)
-def pnucode_convert(front,back):    
-    front = front.astype(str).tolist()
-    back = back.astype(str).tolist()
-    c = front + back
-    pnu_ten = "".join(c) # pnu 10자리로 저장
-    return pnu_ten
+   
 
-```
----
+### 2. 데이터 수집, 독립변수, 종속변수 정하기 (_7/30_)
+- 공공 데이터 포털, 한국도로공사 고속도로 공공 데이터 포털, 국토교통부 국가공간정보포털에서 Open API 방식으로 데이터를 가져올 계획이다. Daily Crawling으로 데이터를 MongoDB에 우선 담고 MariaDB로 변환하려고 한다.   
+- 종속변수로 개별공시지가, 표준공시지가, 실거래가를 고려하고 있다.    
+   
 
-4. 만들어진 pnucode(10자리로) DB에 있는 dataset과 매칭 시킨다. DB를 전체 가져오고 python으로 조작 후
-공시지가를 사용자가 입력한 값으로 모두 바꿔준다.
-```python
-# sql 연결요청
-    
-db = pymysql.connect(
-host='192.168.0.41', port=3306,
-user='scott', passwd='tiger',
-db='finalproject',
-charset='utf8', autocommit=True)
+### 3. 데이터 전처리 (_8/1_)
+- 토지 부동산은 도로와의 거리가 중요하므로 토지 주소와 고속도로 IC 주소를 Python의 haversign을 이용하여 거리계산을 하고 새로운 독립변수로 삼고자 한다.
+- Open API로 불러온 정보 중 필요한 부분만 추출한다.   
+   
 
-cursor = db.cursor(pymysql.cursors.DictCursor)
-cursor.execute("SELECT * from datasets")
-datasets= cursor.fetchall()
+### 4. DB 구축 (_8/3_)
+- 각 토지의 주소에 맞게 RDB의 JOIN 기능을 사용하여 각각에 맞는 개별공시지가, 지가변동률, 교통량 등을 맞추려고 한다.
+- 전국 도로명주소 DB 활용   
+   
 
-db.close()
+### 5. ML/DL (_8/6_)
+- Traditional MachinLearning 중 Clustering 방식으로 종속변수가 없다는 가정 하에 진행하여 군집이 어떻게 이루어지는지 살펴본다.
+- 종속변수를 개별공시지가, 실거래가의 차로 해본다.
+- 개별공시지가를 종속변수로 우선 삼고 실거래가를 참고하여 고평가, 적정가격, 저평가를 구분한다.   
+   
 
-pdDatasets = pd.DataFrame(datasets)
-testdata = pdDatasets[pdDatasets['ldCode']==pnu_10]
-testdata = testdata.reset_index()
+### 6. Django (_8/9_)
+- Python의 Web Service Framework인 Django로 소비자에게 토지 부동산 투자 서비스를 웹에서 제공하고자 한다. 소비자가 원하는 주소지를 선택하면 그 토지에 대한 예상 가격이 나온다. 
+- 저평가된 토지라면 현 시세와 비교하여 투자 가치가 있을지 판단이 가능하다.   
+   
 
-try :
-    testdata['pblntfPclnd'] = test[test['pblntfPclnd']] = jiga # 입력받은 공시지가로 모든 컬럼 변경
-except :
-    print('ignore')
-```
----
-5. home.html에 위에서 조작한 데이터를 보내주어 서비스화면에 표시해야 하기 때문에 dict타입으로 변경해주는 작업과 service에서 보여줄 독립변수만 보내주기위해 zip(리스트형태로 된 데이터들을 dict타입으로 묶어주기 위해 사용: [list1],[list2],[list3]...) 으로 묶는다.
+### 7. PPT, 보고서 작성 (_8/12_)
+- 가설과 분석방법, 분석결과 등 자세히 기술한다.   
+   
 
-- testdata_to_dict도 dictionary 타입인데 zip으로 한 번더 dictionary type으로 묶어주는 이유 : return 하여 html로 보낼 때 반복문하나로 여러개의 요소를 가져올 수 있게 하기 위해 사용한다. 
-
-```python
-#다시 dict type으로   
-testdata_to_dict = testdata.to_dict('list')  
-mylist = zip(testdata_to_dict['juso'],testdata_to_dict['pblntfPclnd'],testdata_to_dict['pnu']) 
-context_ = {
-    'mylist':mylist,
-}  
-```
---> **_결과화면은 값이 잘 전달되는지 보기위해 구현한 것임.(구현하고자 하는 서비스와 다를 수 있음)_**
-```html
-<table id ="resultTable">
-    <tr>
-        <th>주소</th>
-        <th>지가</th>
-        <th>pnu</th>
-    </tr>                       
-    {% for v1,v2,v3 in mylist %} 
-    <tr>
-        <td>{{v1}}</td>                
-        <td>{{v2}}</td>
-        <td>{{v3}}</td>
-    </tr>
-    {% endfor %}             
-    
-</table>
-```
---> **_결과화면 예시_**
-
----
-![result](https://user-images.githubusercontent.com/45375353/90083365-3df66680-dd4d-11ea-9e7a-22940cb953eb.JPG)
-
----
-
-## _+ 구현해야 하는 기능_
-- 위의 5번 동작을 하기 전에 딥러닝으로 생성된 모델에 pnucode로 매칭된 데이터와 입력받은 데이터로 predict 한다. 
-- predict하고 나온 결과 값 (범주형)을 각각 매칭된 주소에 맞게 home.html에 나올 수 있게 구현해야한다.
+### 8. 최종 발표 (_8/14_)
