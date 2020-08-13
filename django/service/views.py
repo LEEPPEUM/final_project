@@ -32,6 +32,7 @@ def home(request):
     db='finalproject',
     charset='utf8', autocommit=True)
 
+    #db 가져오기
     cursor = db.cursor(pymysql.cursors.DictCursor)
     cursor.execute("SELECT * from pnucode_table")
     pddata= cursor.fetchall()
@@ -62,7 +63,7 @@ def home(request):
     testdata = testdata.reset_index()
 
     try :
-        testdata['pblntfPclnd'] = test[test[pblntfPclnd]] = jiga # 입력받은 공시지가로 모든 컬럼 변경
+        testdata['pblntfPclnd'] = test[test['pblntfPclnd']] = jiga # 입력받은 공시지가로 모든 컬럼 변경
     except :
         print('ignore')
 
