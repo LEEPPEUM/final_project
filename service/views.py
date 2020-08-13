@@ -27,7 +27,7 @@ def home(request):
     #sql 연결요청 pdcode_table
     
     db = pymysql.connect(
-    host='192.168.0.41', port=3306,
+    host='127.0.0.1', port=3306,
     user='scott', passwd='tiger',
     db='finalproject',
     charset='utf8', autocommit=True)
@@ -47,7 +47,7 @@ def home(request):
     # sql 연결요청
     
     db = pymysql.connect(
-    host='192.168.0.41', port=3306,
+    host='127.0.0.1', port=3306,
     user='scott', passwd='tiger',
     db='finalproject',
     charset='utf8', autocommit=True)
@@ -63,7 +63,7 @@ def home(request):
     testdata = testdata.reset_index()
 
     try :
-        testdata['pblntfPclnd'] = test[test['pblntfPclnd']] = jiga # 입력받은 공시지가로 모든 컬럼 변경
+        testdata['pblntfPclnd'] = testdata[testdata['pblntfPclnd']] = jiga # 입력받은 공시지가로 모든 컬럼 변경
     except :
         print('ignore')
 
