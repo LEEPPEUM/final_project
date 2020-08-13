@@ -1,0 +1,474 @@
+lndpclAr y
+0    0.233031
+1    0.300206
+2    0.376506
+3    0.176330
+Name: lndpclAr, dtype: float64
+pblntfPclnd y
+0    0.111669
+1    0.208423
+2    0.143172
+3    0.767251
+Name: pblntfPclnd, dtype: float64
+pclndIndex y
+0    0.469898
+1    0.475348
+2    0.424566
+3    0.429896
+Name: pclndIndex, dtype: float64
+pclndChgRt y
+0    0.463013
+1    0.509056
+2    0.482927
+3    0.444652
+Name: pclndChgRt, dtype: float64
+trafficAmount y
+0    0.670690
+1    0.500309
+2    0.530038
+3    0.485960
+Name: trafficAmount, dtype: float64
+distance y
+0    0.541975
+1    0.393550
+2    0.422176
+3    0.367042
+Name: distance, dtype: float64
+prposArea10 y
+0    0.000000
+1    0.000000
+2    0.000000
+3    0.000798
+Name: prposArea10, dtype: float64
+prposArea11 y
+0    0.019663
+1    0.037835
+2    0.027793
+3    0.212291
+Name: prposArea11, dtype: float64
+prposArea12 y
+0    0.039326
+1    0.025957
+2    0.009086
+3    0.284916
+Name: prposArea12, dtype: float64
+prposArea13 y
+0    0.016854
+1    0.012758
+2    0.003741
+3    0.039106
+Name: prposArea13, dtype: float64
+prposArea14 y
+0    0.005618
+1    0.004839
+2    0.001603
+3    0.037510
+Name: prposArea14, dtype: float64
+prposArea15 y
+0    0.00000
+1    0.00000
+2    0.00000
+3    0.01676
+Name: prposArea15, dtype: float64
+prposArea16 y
+0    0.022472
+1    0.018478
+2    0.000534
+3    0.152434
+Name: prposArea16, dtype: float64
+prposArea17 y
+0    0.000000
+1    0.000000
+2    0.000000
+3    0.000798
+Name: prposArea17, dtype: float64
+prposArea18 y
+0    0.019663
+1    0.031676
+2    0.003741
+3    0.032721
+Name: prposArea18, dtype: float64
+prposArea19 y
+0    0.005618
+1    0.002200
+2    0.003207
+3    0.000798
+Name: prposArea19, dtype: float64
+prposArea110 y
+0    0.016854
+1    0.030356
+2    0.113843
+3    0.018356
+Name: prposArea110, dtype: float64
+prposArea111 y
+0    0.070225
+1    0.086230
+2    0.000000
+3    0.013567
+Name: prposArea111, dtype: float64
+prposArea112 y
+0    0.362360
+1    0.274967
+2    0.299840
+3    0.105347
+Name: prposArea112, dtype: float64
+prposArea113 y
+0    0.154494
+1    0.378355
+2    0.408338
+3    0.024741
+Name: prposArea113, dtype: float64
+prposArea114 y
+0    0.075843
+1    0.010999
+2    0.042758
+3    0.007183
+Name: prposArea114, dtype: float64
+prposArea115 y
+0    0.002809
+1    0.011439
+2    0.016034
+3    0.003192
+Name: prposArea115, dtype: float64
+prposArea116 y
+0    0.112360
+1    0.043555
+2    0.053982
+3    0.049481
+Name: prposArea116, dtype: float64
+prposArea117 y
+0    0.075843
+1    0.030356
+2    0.010155
+3    0.000000
+Name: prposArea117, dtype: float64
+prposArea118 y
+0    0.000000
+1    0.000000
+2    0.005345
+3    0.000000
+Name: prposArea118, dtype: float64
+lndcgrCode0 y
+0    0.053371
+1    0.203256
+2    0.269375
+3    0.021548
+Name: lndcgrCode0, dtype: float64
+lndcgrCode1 y
+0    0.061798
+1    0.261329
+2    0.178514
+3    0.006385
+Name: lndcgrCode1, dtype: float64
+lndcgrCode2 y
+0    0.00000
+1    0.00044
+2    0.00481
+3    0.00000
+Name: lndcgrCode2, dtype: float64
+lndcgrCode3 y
+0    0.000000
+1    0.008799
+2    0.007483
+3    0.000798
+Name: lndcgrCode3, dtype: float64
+lndcgrCode4 y
+0    0.084270
+1    0.026837
+2    0.233565
+3    0.008779
+Name: lndcgrCode4, dtype: float64
+lndcgrCode5 y
+0    0.005618
+1    0.023757
+2    0.049706
+3    0.823623
+Name: lndcgrCode5, dtype: float64
+lndcgrCode6 y
+0    0.000000
+1    0.017598
+2    0.019241
+3    0.030327
+Name: lndcgrCode6, dtype: float64
+lndcgrCode7 y
+0    0.000000
+1    0.000440
+2    0.009086
+3    0.011173
+Name: lndcgrCode7, dtype: float64
+lndcgrCode8 y
+0    0.002809
+1    0.003080
+2    0.000000
+3    0.001596
+Name: lndcgrCode8, dtype: float64
+lndcgrCode9 y
+0    0.000000
+1    0.002640
+2    0.000000
+3    0.006385
+Name: lndcgrCode9, dtype: float64
+lndcgrCode10 y
+0    0.000000
+1    0.007919
+2    0.002672
+3    0.004789
+Name: lndcgrCode10, dtype: float64
+lndcgrCode11 y
+0    0.497191
+1    0.199296
+2    0.049172
+3    0.045491
+Name: lndcgrCode11, dtype: float64
+lndcgrCode12 y
+0    0.025281
+1    0.035636
+2    0.005879
+3    0.000798
+Name: lndcgrCode12, dtype: float64
+lndcgrCode13 y
+0    0.019663
+1    0.012319
+2    0.003207
+3    0.000000
+Name: lndcgrCode13, dtype: float64
+lndcgrCode14 y
+0    0.103933
+1    0.060713
+2    0.031534
+3    0.005587
+Name: lndcgrCode14, dtype: float64
+lndcgrCode15 y
+0    0.109551
+1    0.031676
+2    0.006948
+3    0.000798
+Name: lndcgrCode15, dtype: float64
+lndcgrCode16 y
+0    0.008427
+1    0.007039
+2    0.001069
+3    0.000000
+Name: lndcgrCode16, dtype: float64
+lndcgrCode17 y
+0    0.00000
+1    0.00044
+2    0.00000
+3    0.00000
+Name: lndcgrCode17, dtype: float64
+lndcgrCode18 y
+0    0.000000
+1    0.006599
+2    0.006414
+3    0.000000
+Name: lndcgrCode18, dtype: float64
+lndcgrCode19 y
+0    0.005618
+1    0.006599
+2    0.000534
+3    0.002394
+Name: lndcgrCode19, dtype: float64
+lndcgrCode20 y
+0    0.000000
+1    0.005719
+2    0.032603
+3    0.001596
+Name: lndcgrCode20, dtype: float64
+lndcgrCode21 y
+0    0.000000
+1    0.001320
+2    0.001069
+3    0.000000
+Name: lndcgrCode21, dtype: float64
+lndcgrCode22 y
+0    0.000000
+1    0.004399
+2    0.011224
+3    0.012769
+Name: lndcgrCode22, dtype: float64
+lndcgrCode23 y
+0    0.000000
+1    0.000880
+2    0.010155
+3    0.000000
+Name: lndcgrCode23, dtype: float64
+lndcgrCode24 y
+0    0.022472
+1    0.071271
+2    0.065740
+3    0.015164
+Name: lndcgrCode24, dtype: float64
+tpgrphHgCode0 y
+0    0.949438
+1    0.003960
+2    0.001603
+3    0.000000
+Name: tpgrphHgCode0, dtype: float64
+tpgrphHgCode1 y
+0    0.002809
+1    0.004839
+2    0.056120
+3    0.001596
+Name: tpgrphHgCode1, dtype: float64
+tpgrphHgCode2 y
+0    0.042135
+1    0.989441
+2    0.000000
+3    0.895451
+Name: tpgrphHgCode2, dtype: float64
+tpgrphHgCode3 y
+0    0.002809
+1    0.000000
+2    0.853020
+3    0.101357
+Name: tpgrphHgCode3, dtype: float64
+tpgrphHgCode4 y
+0    0.002809
+1    0.001760
+2    0.087654
+3    0.001596
+Name: tpgrphHgCode4, dtype: float64
+tpgrphHgCode5 y
+0    0.000000
+1    0.000000
+2    0.001603
+3    0.000000
+Name: tpgrphHgCode5, dtype: float64
+tpgrphFrmCode0 y
+0    0.865169
+1    0.007039
+2    0.000534
+3    0.001596
+Name: tpgrphFrmCode0, dtype: float64
+tpgrphFrmCode1 y
+0    0.000000
+1    0.003520
+2    0.003207
+3    0.055068
+Name: tpgrphFrmCode1, dtype: float64
+tpgrphFrmCode2 y
+0    0.000000
+1    0.028597
+2    0.012293
+3    0.079808
+Name: tpgrphFrmCode2, dtype: float64
+tpgrphFrmCode3 y
+0    0.008427
+1    0.059833
+2    0.013896
+3    0.150040
+Name: tpgrphFrmCode3, dtype: float64
+tpgrphFrmCode4 y
+0    0.000000
+1    0.131984
+2    0.105826
+3    0.473264
+Name: tpgrphFrmCode4, dtype: float64
+tpgrphFrmCode5 y
+0    0.002809
+1    0.037835
+2    0.023517
+3    0.039904
+Name: tpgrphFrmCode5, dtype: float64
+tpgrphFrmCode6 y
+0    0.000000
+1    0.003960
+2    0.002672
+3    0.000798
+Name: tpgrphFrmCode6, dtype: float64
+tpgrphFrmCode7 y
+0    0.123596
+1    0.714914
+2    0.823089
+3    0.161213
+Name: tpgrphFrmCode7, dtype: float64
+tpgrphFrmCode8 y
+0    0.000000
+1    0.012319
+2    0.014965
+3    0.038308
+Name: tpgrphFrmCode8, dtype: float64
+roadSideCode0 y
+0    0.926966
+1    0.046194
+2    0.011224
+3    0.007183
+Name: roadSideCode0, dtype: float64
+roadSideCode1 y
+0    0.014045
+1    0.142983
+2    0.027258
+3    0.078212
+Name: roadSideCode1, dtype: float64
+roadSideCode2 y
+0    0.000000
+1    0.010999
+2    0.012827
+3    0.080607
+Name: roadSideCode2, dtype: float64
+roadSideCode3 y
+0    0.000000
+1    0.007479
+2    0.002138
+3    0.027933
+Name: roadSideCode3, dtype: float64
+roadSideCode4 y
+0    0.000000
+1    0.088429
+2    0.037413
+3    0.147646
+Name: roadSideCode4, dtype: float64
+roadSideCode5 y
+0    0.000000
+1    0.017158
+2    0.003741
+3    0.076616
+Name: roadSideCode5, dtype: float64
+roadSideCode6 y
+0    0.008427
+1    0.069512
+2    0.081240
+3    0.154828
+Name: roadSideCode6, dtype: float64
+roadSideCode7 y
+0    0.000000
+1    0.012758
+2    0.004276
+3    0.066241
+Name: roadSideCode7, dtype: float64
+roadSideCode8 y
+0    0.000000
+1    0.287725
+2    0.194014
+3    0.285714
+Name: roadSideCode8, dtype: float64
+roadSideCode9 y
+0    0.000000
+1    0.014518
+2    0.005345
+3    0.030327
+Name: roadSideCode9, dtype: float64
+roadSideCode10 y
+0    0.002809
+1    0.110427
+2    0.143239
+3    0.031125
+Name: roadSideCode10, dtype: float64
+roadSideCode11 y
+0    0.000000
+1    0.001320
+2    0.001603
+3    0.003192
+Name: roadSideCode11, dtype: float64
+roadSideCode12 y
+0    0.047753
+1    0.190497
+2    0.475681
+3    0.010375
+Name: roadSideCode12, dtype: float64
+y y
+0    0
+1    1
+2    2
+3    3
+Name: y, dtype: int32
