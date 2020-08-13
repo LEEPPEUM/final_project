@@ -6,9 +6,7 @@
 1. form.html에서 입력받을 form을 제공, 사용자가 form에 맞게 데이터를 입력
 
 ---
-x-special/nautilus-clipboard
-copy
-file:///home/sundooedu/%EB%AC%B8%EC%84%9C/final_project/django/form.JPG
+![form](https://user-images.githubusercontent.com/45375353/90083379-451d7480-dd4d-11ea-926e-0530662abbc1.JPG)
 
 ---
 
@@ -114,9 +112,7 @@ context_ = {
 --> **_결과화면 예시_**
 
 ---
-x-special/nautilus-clipboard
-copy
-file:///home/sundooedu/%EB%AC%B8%EC%84%9C/final_project/django/result.JPG
+![result](https://user-images.githubusercontent.com/45375353/90083365-3df66680-dd4d-11ea-9e7a-22940cb953eb.JPG)
 
 ---
 
