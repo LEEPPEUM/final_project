@@ -1,11 +1,3 @@
-SELECT ds.*,lsp.pclndIndex as priceindex,lsp.pclndChgRt as priceChg, lsp.stdrYear,lsp.stdrMt
-FROM (SELECT *, substr(pnu,1,10) as pnux
-      FROM DATASETS) as ds INNER JOIN (SELECT * 
-                                       FROM LAND_SIDO_ppeum
-                                       WHERE CHAR_LENGTH(pnu)=10 and stdrMt = 1 and stdrYear = 2019) as lsp ON  ds.pnux= lsp.pnu;
-
-
-
-
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:c7778f17bd2e76e54fa7faaa0e6c98b72e69c83293543f8295c726b62c6f8663
+size 379
