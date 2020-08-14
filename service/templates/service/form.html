@@ -1,6 +1,7 @@
 <html>
     <head>
         <style>
+            @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
             * {
               box-sizing: border-box;
             }
@@ -81,6 +82,9 @@
             </style>
     </head>
     <body>
+        <h1>
+            경기 지역의 토지부동산 투자가치 서비스
+        </h1>
         <form action="/service/" method ="get">
             <p>
                 <lavel for ="si_gun_gu"> 시 군 구 : </lavel>
@@ -95,7 +99,7 @@
                 <label for ="gongsijiga">공시지가 : </label>
                 <input type = "number" name ="gongsijiga">       
             </p>            
-            <p>
+            <!-- <p>
                 지목코드 : 
                 <select name = lncode>
                     <option value="01">01:전</option>
@@ -134,7 +138,7 @@
                     <option value="28">28:잡종지</option>
 
                 </select>
-            </p>            
+            </p>             -->
             <input type ="submit" value = "Submit"> <input type ="reset" value ="Reset">
         </form>
     </body>

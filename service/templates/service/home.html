@@ -3,8 +3,9 @@
 <html>    
     <head>
         <style>
+            @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
             #resultTable {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-family: "Trebuchet MS", Nanum Gothic, Helvetica, sans-serif;
             border-collapse: collapse;
             width: 100%;
             text-align: center;
@@ -33,7 +34,7 @@
             <tr>
                 <th>주소</th>
                 <th>지가</th>
-                <th>pnu</th>
+                <th>등급</th>
             </tr>                       
             {% for v1,v2,v3 in mylist %} 
             <tr>
@@ -41,63 +42,7 @@
                 <td>{{v2}}</td>
                 <td>{{v3}}</td>
             </tr>
-            {% endfor %}             
-
-            <!-- <tr>
-                <th>pnu</th>
-                <th>주소</th>
-                <th>지가</th>
-            </tr>
-            <tr>
-                <td>{{pnu.1}}</td>
-                <td>{{juso.1}}</td>
-                <td>{{pblntfPclnd.1}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.2}}</td>
-                <td>{{juso.2}}</td>
-                <td>{{pblntfPclnd.2}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.3}}</td>
-                <td>{{juso.3}}</td>
-                <td>{{pblntfPclnd.3}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.4}}</td>
-                <td>{{juso.4}}</td>
-                <td>{{pblntfPclnd.4}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.5}}</td>
-                <td>{{juso.5}}</td>
-                <td>{{pblntfPclnd.5}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.6}}</td>
-                <td>{{juso.6}}</td>
-                <td>{{pblntfPclnd.6}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.7}}</td>
-                <td>{{juso.7}}</td>
-                <td>{{pblntfPclnd.7}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.8}}</td>
-                <td>{{juso.8}}</td>
-                <td>{{pblntfPclnd.8}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.9}}</td>
-                <td>{{juso.9}}</td>
-                <td>{{pblntfPclnd.9}}</td>
-            </tr>
-            <tr>
-                <td>{{pnu.10}}</td>
-                <td>{{juso.10}}</td>
-                <td>{{pblntfPclnd.10}}</td>
-            </tr> -->
+            {% endfor %}   
         </table>
     </body>
 </html>
