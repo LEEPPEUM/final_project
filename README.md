@@ -76,8 +76,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
    [완료] mongoDB, MariaDB 서버 구축 & 관리   
    [진행중] Django 웹 서비스 구축 및 개발  
    [진행중] Python에서 Django와 MariaDB를 연결하여 웹 서비스 화면 제공.  
-   [완료] Django README.md 작성  
-   https://github.com/LEEPPEUM/final_project/blob/master/README(django).md  
+   [완료] Django README.md 작성 : https://github.com/LEEPPEUM/final_project/blob/master/README(django).md    
+     
    
    
 #
