@@ -55,7 +55,8 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
            1) one-hot encoding, outlier 처리,scaler   
            2) 전처리 단계별 Jamovi model power, vif check    
            3) 전처리 단계별 var check    
-   [완료] 머신러닝 모델링(k-means)      
+   [완료] 머신러닝 모델링(k-means)  
+   [완료] 딥러닝 모델링   
  
    
 ### **- 이기쁨(Lee Gippeum) :**   
@@ -67,15 +68,15 @@ Land  Real Estate Investment Valuation Web Service for the Gyeonggi area.
    [완료] MariaDB 및 Python으로 MariaDB 연결하여 데이터 전처리   
    [완료] key를 이용하여 하나의 데이터셋으로 통합(inner join)   
    [완료] jamovi로 독립변수들간의 연관성을 살피고 이상치 확인, 범주형 변수의 특성 파악.   
-   [진행중] 딥러닝 모델링       
+   [완료] PPT 작성    
    
    
 ### **- 이준오(Lee Juno) :**   
    [완료] 영업소별 교통량, IC/JCT 위치정보, 전국 영업소 위치정보 MariaDB에 업로드   
    [완료] 행정구역별 토지거래량 (경기도) 데이터 가공   
    [완료] mongoDB, MariaDB 서버 구축 & 관리   
-   [진행중] Django 웹 서비스 구축 및 개발  
-   [진행중] Python에서 Django와 MariaDB를 연결하여 웹 서비스 화면 제공.  
+   [완료] Django 웹 서비스 구축 및 개발  
+   [완료] Python에서 Django와 MariaDB를 연결하여 웹 서비스 화면 제공.  
    [완료] Django README.md 작성 : https://github.com/LEEPPEUM/final_project/blob/master/README(django).md    
      
    
